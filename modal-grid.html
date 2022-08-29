@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Modal Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css">
+	body {
+		background-color: #DDD;
+	}
+
+	body {
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	a {
+		color: #C00;
+		text-decoration: none;
+	}
+
+	.modal {
+		opacity: 0;
+		max-width: 600px;
+		visibility: hidden;
+		text-align: center;
+		border-radius: 10px;
+		background-color: #FFF;
+		box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+		transition: all .2s ease-in-out;
+	}
+
+	.modal h1,
+	.modal a {
+		display: none;
+	}
+
+	.modal:target {
+		opacity: 1;
+		height: auto;
+		padding: 3em 0;
+		margin-bottom: 1em;
+		visibility: visible;
+	}
+
+	.modal:target h1,
+	.modal:target a {
+		display: block;
+	}
+
+	#wrapper {
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.grid {
+		height: 90vh;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.cell {
+		width: 25vw;
+		padding: 1em;
+		margin: .5em;
+		border-radius: 10px;
+		border: 2px solid #000;
+	}
+
+	[href="#"] {
+		display: none;
+	}
+
+	.modal:target+span a:first-child {
+		display: none;
+	}
+
+	.modal:target+span a:last-child {
+		display: block;
+	}
+
+	.trigger {
+		color: #000;
+		display: block;
+		font-weight: 600;
+	}
+
+	.trigger:hover {
+		color: #666;
+	}
+</style>
+
+<body>
+	<div class="grid">
+		<div class="cell">
+			<div id="box" class="modal">
+				<h1>I'm Open!</h1>
+			</div>
+			<span>
+				<a class="trigger" href="#box">Click to Open the Modal</a>
+				<a href="#">[ Close ]</a>
+			</span>
+		</div>
+
+		<div class="cell">
+			<div id="box2" class="modal">
+				<h1>I'm Open!</h1>
+			</div>
+			<span>
+				<a class="trigger" href="#box2">Click to Open the Modal</a>
+				<a href="#">[ Close ]</a>
+			</span>
+		</div>
+
+		<div class="cell">
+			<div id="box3" class="modal">
+				<h1>I'm Open!</h1>
+			</div>
+			<span>
+				<a class="trigger" href="#box3">Click to Open the Modal</a>
+				<a href="#">[ Close ]</a>
+			</span>
+		</div>
+
+	</div>
+</body>
+
+</html>

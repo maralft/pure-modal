@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css">
+
+	* {
+		transition: all .2s ease-in-out;
+	}
+
+	body {
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	body {
+		background-color: #DDD;
+	}
+
+	a {
+		color: #C00;
+		text-decoration: none;
+	}
+
+	.modal {
+		opacity: 0;
+		padding: 3em;
+		max-width: 600px;
+		visibility: hidden;
+		position: absolute;
+		text-align: center;
+		border-radius: 10px;
+		background-color: #FFF;
+		transform: translateY(-20px);
+		box-shadow: 0 10px 10px 0 rgba(0,0,0,.1);
+	}
+
+	.modal:target {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	#wrapper {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		display: flex;
+		position: absolute;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.trigger {
+		color: #000;
+		padding: 1em;
+		font-weight: 600;
+		border-radius: 10px;
+		border: 2px solid #000;
+	}
+
+	.trigger:hover {
+		color: #CCC;
+		background-color: #000;
+	}
+
+</style>
+
+<body>
+	<div id="wrapper">
+		<a class="trigger" href="#box">Click to Open the Modal</a>
+		<div id="box" class="modal">
+			<h1>I'm Open!</h1>
+			<p>Lorem ipsum dolor sit amet, solum similique vel ei. Quis fuisset conclusionemque sed cu, aeque vitae affert per ex, duo an zril soleat. Mel salutandi explicari instructior at, autem quidam expetenda his ea. Vim et unum voluptaria instructior. No mollis scriptorem nam, mentitum conceptam instructior an vim, aliquando deterruisset te vis.<br />Sea et animal reprimique eloquentiam, ea persius omnesque vivendum pri. Ea facer corrumpit splendide mea, ad graeci vocent pro. Zril blandit verterem sea cu, sit ad ridens principes complectitur, usu posse nemore detracto no. Cum at decore impetus neglegentur. Eam malorum albucius percipit ad, vix sint recteque consulatu cu.<br />Sed mediocrem conceptam philosophia et. Volumus gubergren temporibus no mea. Mel at vide ipsum nostrud. Nusquam offendit contentiones at quo.</p>
+			<a href="#">[ Close ]</a>
+		</div>
+	</div>
+</body>
+</html>
